@@ -11,3 +11,20 @@
 ## Notes on k8s api
 
 **kind** and **api** are related. To be more precise, there are many 'kinds' of configs under an 'api'.
+E.g/ 'Pod' is under `api: v1` but 'Deployment' is under `api: apps/v1`
+
+One can expose port with the help of `ports` and `containerPort` in the definition of a container.
+
+For debugging kubectl can port-forward to your pod's exposed port in this way.
+
+```sh
+kubectl port-forward $PODNAME 3000:3000
+```
+
+[Services](https://medium.com/google-cloud/kubernetes-nodeport-vs-loadbalancer-vs-ingress-when-should-i-use-what-922f010849e0) are used to expose containers to external networks. Some types of services are NodePort, Ingress, LoadBalancer.
+
+You can separate configs in the same file with a `---` on a new line. This won't be the case if you're using something like `skaffold` when the configs can be aggregrated within a directory.
+
+Update [LoadBalancers doesn't work with `minikube`](https://stackoverflow.com/questions/44110876/kubernetes-service-external-ip-pending). One can still use Ingress, NodePort.
+
+`ClusterIP` can be used to expose ports within the cluster. This is also a type of `Service`.
