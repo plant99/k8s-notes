@@ -6,3 +6,4 @@
 4. [Mark Bets - k8s networking](https://medium.com/google-cloud/understanding-kubernetes-networking-pods-7117dd28727)
 5. [Container networking from scratch - KubeCon talk](https://www.youtube.com/watch?v=6v_BDHIgOY8)
 6. [Networking in linux - blogpost](http://ifeanyi.co/posts/linux-namespaces-part-4/)
+7. [Ahmet's blogpost on skaffold](https://ahmet.im/blog/skaffold/)
