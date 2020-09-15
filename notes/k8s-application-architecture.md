@@ -7,3 +7,7 @@
 **Ingress/LoadBalancer** is used to expose our application to outside.
 
 **Persistent Volume** is used to persist data across 'auto-scaling'.
+
+## Notes on k8s api
+
+**kind** and **api** are related. To be more precise, there are many 'kinds' of configs under an 'api'.
